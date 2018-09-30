@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Internal game scripts/styles, mostly boring stuff -->
+    <script src="https://xss-game.appspot.com/static/game-frame.js"></script>
+    <link rel="stylesheet" href="https://xss-game.appspot.com/static/game-frame-styles.css" />
+</head>
+
+<body id="level4">
+<img src="https://xss-game.appspot.com/static/logos/level4.png" />
+<br>
+<form action="" method="GET" onsubmit="onSubmitHandle()">
+    <input id="timer" name="timer" value="3" pattern="[0-9]">
+    <input id="button" type="submit" value="Create timer"> </form>
+</form>
+
+<script>
+    function onSubmitHandle() {
+        this.timer.value = /[0-9]/.test(this.timer.value) || 3;
+    }
+</script>
+</body>
+</html>
